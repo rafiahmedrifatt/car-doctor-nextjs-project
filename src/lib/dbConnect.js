@@ -1,6 +1,10 @@
 import { MongoClient, ServerApiVersion } from 'mongodb';
 
 
+export const collection = {
+    service: "services"
+}
+
 
 export default function dbConnect(collectionName) {
     const uri = process.env.DB_URI
