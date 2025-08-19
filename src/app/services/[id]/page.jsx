@@ -16,7 +16,19 @@ export default async function serviceComponent({ params }) {
                     </div>
                 </figure>
             </section>
-            {JSON.stringify(data)}
+            <Image src={data.img} width={752} height={400} />
+            <p>{data.title}</p>
+            <p>{data.description}</p>
+            {
+                data.facility.map(singleFacility =>
+                    <div>
+                        <p>{singleFacility.name}</p>
+                        <p>{singleFacility.details}</p>
+                    </div>
+                )
+            }
+            <div>{JSON.stringify(data.facility)}</div>
+            {/* {JSON.stringify(data)} */}
             {JSON.stringify(p.id)}
             {collection.service}
         </div>
