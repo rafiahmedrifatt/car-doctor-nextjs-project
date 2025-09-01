@@ -5,7 +5,7 @@ import React from 'react'
 
 export default async function serviceComponent({ params }) {
     const p = await params
-    const data = await dbConnect(collection.ser  vice).findOne({ _id: new ObjectId(p.id) })
+    const data = await dbConnect(collection.service).findOne({ _id: new ObjectId(p.id) })
     return (
         <div>
             <section className='flex justify-center w-full'>
